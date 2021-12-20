@@ -1,2 +1,5 @@
-package com.poshyweb.forum.modal;public class Modelo {
+package com.poshyweb.forum.modal;
+
+public class Modelo {
+
 }
