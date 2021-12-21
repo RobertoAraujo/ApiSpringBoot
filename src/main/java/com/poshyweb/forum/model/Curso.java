@@ -17,6 +17,9 @@ public class Curso {
     public Curso(String spring, String progrmação) {
     }
 
+    public Curso() {
+    }
+
     public Curso(Long id, String nome, String categoria) {
         this.id = id;
         this.nome = nome;

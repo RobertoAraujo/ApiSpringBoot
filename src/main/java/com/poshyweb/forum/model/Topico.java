@@ -30,6 +30,9 @@ public class Topico {
     @OneToMany(mappedBy = "topico")
     private List<Resposta> respostas = new ArrayList<>();
 
+    public Topico() {
+    }
+
     public Topico(String duvida, String duvida_com_spring_, Curso curso) {
 
     }

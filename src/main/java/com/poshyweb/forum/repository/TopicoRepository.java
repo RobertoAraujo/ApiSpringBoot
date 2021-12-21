@@ -1,4 +1,8 @@
 package com.poshyweb.forum.repository;
 
-public interface TopicoRepository {
+import com.poshyweb.forum.model.Topico;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TopicoRepository extends JpaRepository<Topico , Long> {
+
 }
