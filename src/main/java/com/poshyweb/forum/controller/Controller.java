@@ -15,7 +15,7 @@ import java.util.List;
 public class Controller {
 
     @RequestMapping(value = "/vi/hello") // Mostra o caminho da api
-    @ResponseBody //
+    @ResponseBody // indicamos que o retorno do método deve ser serializado e devolvido no corpo da resposta.
     public String Hello(){
        return "Ola Roberto.";
     }
