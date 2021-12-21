@@ -1,11 +1,17 @@
 package com.poshyweb.forum.model;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Curso {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String nome;
+    @Column
     private String categoria;
 
     public Curso(String spring, String progrmação) {

@@ -1,12 +1,19 @@
 package com.poshyweb.forum.model;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Usuario {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String nome;
+    @Column
     private String email;
+    @Column
     private String senha;
 
     public Usuario() {
