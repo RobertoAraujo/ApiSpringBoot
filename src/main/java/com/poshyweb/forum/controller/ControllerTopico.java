@@ -21,8 +21,14 @@ public class ControllerTopico {
 
     @ResponseBody // indicamos que o retorno do método deve ser serializado e devolvido no corpo da resposta.
     @RequestMapping(path= "/vi/topicos", method = RequestMethod.GET) // Mostra o caminho da api
-    public List<TopicoDTO> lista(){
-        List<Topico> topicos =repository.findAll();
-        return TopicoDTO.converter(topicos);
+    public List<TopicoDTO> listaComParametro(String nomeCurso){
+        if (nomeCurso == null) {
+            System.out.println("funciona" + nomeCurso);
+            List<Topico> topicos = repository.findAll();
+            return TopicoDTO.converter(topicos);
+        }else {
+            List<Topico> topicos = repository.findByCursoNome(nomeCurso);
+            return TopicoDTO.converter(topicos);
+        }
     }
 }
